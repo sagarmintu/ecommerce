@@ -31,6 +31,16 @@
     <script src="{{ asset('admin/js/popper.min.js') }}" defer></script>
     <script src="{{ asset('admin/js/bootstrap-material-design.min.js') }}" defer></script>
     <script src="{{ asset('admin/js/perfect-scrollbar.jquery.min.js') }}" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @if(session('status'))
+        <script> swal({
+            title: "Good job!",
+            text: "{{session('status')}}",
+            icon: "success",
+            button: "Aww yiss!",
+        });
+        </script>
+    @endif
 
     @yield('scripts')
 
