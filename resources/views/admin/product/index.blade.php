@@ -11,8 +11,9 @@
                 <thead>
                     <tr>
                         <th>Id</th>
+                        <th>Category</th>
                         <th>Name</th>
-                        <th>Description</th>
+                        <th>Selling Price</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
@@ -21,14 +22,15 @@
                     @foreach($products as $item)
                     <tr>
                         <td>{{$item->id}}</td>
+                        <td>{{$item->category->name}}</td>
                         <td>{{$item->name}}</td>
-                        <td>{{$item->description}}</td>
+                        <td>{{$item->selling_price}}</td>
                         <td>
-                            <img height="100" width="100" src="{{asset('assets/uploads/products/'.$item->image)}}">
+                            <img height="70" width="70" src="{{asset('assets/uploads/products/'.$item->image)}}">
                         </td>
                         <td>
-                            <a href="{{url('edit-product/'.$item->id)}}" class="btn btn-success">Edit</a>
-                            <a href="{{url('delete-product/'.$item->id)}}" class="btn btn-danger">Delete</a>
+                            <a href="{{url('edit-product/'.$item->id)}}" class="btn btn-success btn-sm">Edit</a>
+                            <a href="{{url('delete-product/'.$item->id)}}" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                     @endforeach
