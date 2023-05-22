@@ -16,10 +16,10 @@
           <a class="nav-link" href="#">Pricing</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1">Login</a>
+          <a class="nav-link" href="{{ url('/login') }}" tabindex="-1">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1">Register</a>
+          <a class="nav-link" href="{{ url('/register') }}" tabindex="-1">Register</a>
         </li>
       </ul>
     </div>
